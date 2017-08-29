@@ -29,3 +29,7 @@ build
 .env
 npm-debug.log
 /.idea
+
+src/components/Auth/SignIn.js
+
+src/components/Auth/SignUpp.js

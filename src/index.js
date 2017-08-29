@@ -2,7 +2,7 @@ import './assets/sass/main.sass'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {AppContainer} from 'react-hot-loader'
-import App from './containers/App'
+import Root from './Root'
 
 const render = Component => {
   ReactDOM.render(
@@ -13,8 +13,8 @@ const render = Component => {
   )
 }
 
-render(App)
+render(Root)
 
 if (module.hot) {
-  module.hot.accept('./containers/App', () => { render(App) })
+  module.hot.accept('./Root', () => { render(App) })
 }
