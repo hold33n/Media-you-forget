@@ -8,8 +8,9 @@ import history from '../history'
 const enhancer = applyMiddleware(routerMiddleware(history), thunk, logger)
 
 const store = createStore(reducer, compose(
-  enhancer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  enhancer
+  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  )
 )
 
 window.store = store
