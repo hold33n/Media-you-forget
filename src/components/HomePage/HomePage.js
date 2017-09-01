@@ -21,7 +21,7 @@ class HomePage extends Component {
           <div className="row">
             <h1>Never forget what you wanted <br/>to read or watch with MYF </h1>
             <p>Add books, movies and tv shows into a reading list and keep the record of what you already watched or readed</p>
-            <a href="#">Get it now</a>
+            <Link to="/auth/signUp">Get it now</Link>
           </div>
         </div>
       </section>
@@ -30,4 +30,4 @@ class HomePage extends Component {
 }
 
 
-export default HomePage;
+export default HomePage

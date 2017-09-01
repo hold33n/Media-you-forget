@@ -1,13 +1,13 @@
-// import firebase from 'firebase'
+import firebase from 'firebase'
 
-export const appName = "myf"
-// export const firebaseConfig = {
-//   apiKey: "AIzaSyDjA6CeIHuni5lNm4ML1b-TSxJltsYUO8g",
-//   authDomain: `${appName}.firebaseapp.com`,
-//   databaseURL: `https://${appName}.firebaseio.com`,
-//   projectId: appName,
-//   storageBucket: `${appName}.appspot.com`,
-//   messagingSenderId: "789814589283"
-// }
+export const appName = "lanp-rate"
+export const firebaseConfig = {
+  apiKey: "AIzaSyAbxmwcwaIAW2c3wV0D7ZE6H5Kn8xaS1uE",
+  authDomain: `${appName}.firebaseapp.com`,
+  databaseURL: `https://${appName}.firebaseio.com`,
+  projectId: appName,
+  storageBucket: `${appName}.appspot.com`,
+  messagingSenderId: "397865048380"
+}
 
-// firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)

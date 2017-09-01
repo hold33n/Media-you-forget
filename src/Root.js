@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import HomePage from './components/HomePage/HomePage'
-import SignIn from './components/Auth/Sign-in'
-import SignUp from './components/Auth/Sign-up'
+import AuthPage from './components/Auth/Auth'
+import Dashboard from './components/Dashboard/Dashboard'
+import ProtectedRoute from './components/ProtectedRoute'
 import Wormhole from './components/Wormhole'
 import {Route, Switch} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import {ConnectedRouter} from 'react-router-redux'
-import store from './store'
+import store from './redux/index'
 import history from './history'
 
 
@@ -18,10 +19,10 @@ export default class Root extends Component {
           <div>
             <Switch>
               <Route exact path='/' component={HomePage}/>
-              <Route path='/auth/signIn' component={SignIn}/>
-              <Route path='/auth/signUp' component={SignUp}/>
+              <ProtectedRoute path="/dashboard" component={Dashboard}/>
+              <AuthPage />
+              <Route component={Wormhole}/>
 
-              <Route path='/*' component={Wormhole}/>
             </Switch>
           </div>
         </ConnectedRouter>

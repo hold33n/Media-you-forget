@@ -3,11 +3,10 @@ import {reduxForm, Field} from 'redux-form'
 import emailValidator from 'email-validator'
 import InputField from './InputField'
 
-class SignUpForm extends Component {
-  static propTypes = {};
-
+class SignUp extends Component {
   render() {
     const {handleSubmit} = this.props
+
     return (
       <section className="auth">
         <div className="auth-card">
@@ -16,7 +15,7 @@ class SignUpForm extends Component {
             <Field name="email" component={InputField}/>
             <Field name="password" component={InputField} type="password"/>
             <div className="input-field">
-              <input type="submit" value="Sign in" />
+              <input type="submit" value="Register" />
             </div>
           </form>
         </div>
@@ -41,6 +40,6 @@ const validate = ({email, password}) => {
 
 
 export default reduxForm({
-  form: 'auth',
+  form: 'sign-up',
   validate
-})(SignUpForm)
+})(SignUp)

@@ -5,8 +5,8 @@ const InputField = ({input, type, meta: {error, touched}}) => {
 
   return (
     <div className="input-field">
-      <label>{capitalize(input.name)}</label>
-      <input {...input} autoComplete="off" type={type}/>
+      <label htmlFor={input.name}>{capitalize(input.name)}</label>
+      <input id={input.name} {...input} autoComplete="off" type={type}/>
       {errorText}
     </div>
   )

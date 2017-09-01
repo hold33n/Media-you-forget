@@ -1,0 +1,106 @@
+div.loader-overlay
+  position: fixed
+  top: 0
+  list-style-position: outside
+  height: 100%
+  width: 100%
+  background-color: rgba(192, 192, 192, .65)
+  z-index: 100
+  div.loader-wrap
+    height: 100vh
+    width: 100vw
+    position: relative
+    div.loader
+      position: absolute
+      left: calc(50% - 50px)
+      top: 200px
+
+@keyframes loader3
+  0%, 25%
+    left: 16px
+    transform: scale(0)
+  50%
+    left: 16px
+    transform: scale(1)
+  75%
+    left: 50px
+
+  100%
+    left: 84px
+    transform: scale(1)
+
+
+@keyframes loader2 
+  0%
+    transform: scale(1)
+
+  25%, 100%
+    transform: scale(0)
+
+
+@keyframes loader 
+  0%
+    left: 16px
+    transform: scale(0)
+
+  25%
+    left: 16px
+    transform: scale(1)
+
+  50%
+    left: 50px
+
+  75%
+    left: 84px
+    transform: scale(1)
+
+  100%
+    left: 84px
+    transform: scale(0)
+
+
+.loader 
+  position: relative
+
+.loader > div 
+  position: absolute
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  width: 16px
+  height: 16px
+
+.loader div > div 
+  width: 16px
+  height: 16px
+  border-radius: 50%
+  background: #f00
+  position: absolute
+  top: 50px
+  left: 16px
+  -webkit-animation: loader 1.6s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards
+  animation: loader 1.6s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards
+
+.loader div:nth-child(1) div 
+  -webkit-animation: loader2 1.6s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards
+  animation: loader2 1.6s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards
+  background: #ffffff
+
+.loader div:nth-child(2) div 
+  -webkit-animation-delay: -0.8s
+  animation-delay: -0.8s
+  background: #ffffff
+
+.loader div:nth-child(3) div 
+  -webkit-animation-delay: -0.4s
+  animation-delay: -0.4s
+  background: #ffffff
+
+.loader div:nth-child(4) div 
+  -webkit-animation-delay: 0s
+  animation-delay: 0s
+  background: #ffffff
+
+.loader div:nth-child(5) div 
+  -webkit-animation: loader3 1.6s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards
+  animation: loader3 1.6s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards
+  background: #ffffff
