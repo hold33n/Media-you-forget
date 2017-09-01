@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import {reduxForm, Field} from 'redux-form'
 
 class SignInForm extends Component {
-  static propTypes = {};
-
   render() {
     const {handleSubmit} = this.props
     return (
@@ -20,7 +18,7 @@ class SignInForm extends Component {
               <Field name="password" id="password" component="input" type="password"/>
             </div>
             <div className="input-field">
-              <input type="submit" value="Registration" />
+              <input type="submit" value="Sign in" />
             </div>
           </form>
         </div>
@@ -30,5 +28,5 @@ class SignInForm extends Component {
 }
 
 export default reduxForm({
-  form: 'auth'
+  form: 'sign-in'
 })(SignInForm)
