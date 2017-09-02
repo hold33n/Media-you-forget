@@ -61,6 +61,7 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.14.1",
+    "transform-runtime": "^0.0.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.3.2",
     "webpack-dev-middleware": "^1.6.1",
